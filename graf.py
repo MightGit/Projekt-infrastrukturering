@@ -14,17 +14,17 @@ class mainWindow:
         x1=100
         self.root = Tk()
 
-        velkomst = Label(self.root, text="Graf udregner")
+        velkomst = Label(self.root, text="Graf udregner") #Title til vinduet
         velkomst.pack(pady=10)
 
 
-        self.fx = Entry(self.root)
+        self.fx = Entry(self.root) #Label, plus linje udskriver til funktion
         self.fx.pack()
         if len(self.fx.get()) == 0:
             self.fx.insert(END, 'indsæt funktion')
 
 
-        self.x0 = Entry(self.root)
+        self.x0 = Entry(self.root) #Linje oprætter så man kan indskrive x-værdi
         self.x0.pack()
         if len(self.x0.get()) == 0:
             self.x0.insert(END, 'indsæt din x0 her')
@@ -34,7 +34,7 @@ class mainWindow:
         if len(self.x1.get()) == 0:
             self.x1.insert(END, 'indsæt din x1 her')
 
-        def getFunctionFromString(inputString='y= x**2'):
+        def getFunctionFromString(inputString='y= x**2'): #Sympy udregninger
 
             # Tjek efter om brugeren har tastet = ind i.
 
@@ -53,10 +53,10 @@ class mainWindow:
 
             return f
 
-        def plot():
+        def plot(): #Plotter som bruger vores mathplotlib
             fig, ax = plt.subplots()
 
-            f = getFunctionFromString(self.fx.get())
+            f = getFunctionFromString(self.fx.get()) #Denne funktion giver os en graf selvom man ikke har indtastet x værdier
             try:
                 x0=int(self.x0.get())
             except:
