@@ -2,7 +2,7 @@
 
 Dette er vores projekt hvor vi vil vise et par grafer
 
-Vores program er generelt baseret på at vise en graf ud fra matematiske udregninger.
+##Vores program er generelt baseret på at vise en graf ud fra matematiske udregninger.
 Den starter på at vise et vindue med en x0 og en x1 box, hvor man skal instaste sine udregninger, derefter når man er klar trykker man på "plotwin"
 og derfra burde så give dig dine grafer.
 
