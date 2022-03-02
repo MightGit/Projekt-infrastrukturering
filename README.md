@@ -26,3 +26,4 @@ Dette nye vindue giver muligheden for at skrive dine funktioner ind, sammen med 
 
 I forhold til hvis man skriver det forkert, så er der ikke rigtig lige nu en mulighed for at se om der er en fejl, men det viser i programmet at det opstår et fejl hvis man skriver en forkert funktion.
 
+Her er [flowcharten](codechart.png) som repræssentere hvordan vores kode fungerer fra python synspunkt. 
