@@ -14,7 +14,7 @@ class mainWindow:
         x1=100
         self.root = Tk()
 
-        velkomst = Label(self.root, text="Velkommen til GUI")
+        velkomst = Label(self.root, text="Graf udregner")
         velkomst.pack(pady=10)
 
 
