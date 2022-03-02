@@ -1,10 +1,9 @@
 from tkinter import *
-from tkinter.ttk import * #progressbar
-from plotter import PlotterClass
 import numpy as np
 import matplotlib.pyplot as plt
 from sympy.parsing.sympy_parser import parse_expr
 import sympy as sym
+
 
 class mainWindow:
 
@@ -38,6 +37,7 @@ class mainWindow:
         def getFunctionFromString(inputString='y= x**2'):
 
             # Tjek efter om brugeren har tastet = ind i.
+
             if '=' in inputString:
                 user_input = inputString.split('=')[1]  # Del input strengen op ved '=', og giv anden del tilbage.
             else:
@@ -57,12 +57,20 @@ class mainWindow:
             fig, ax = plt.subplots()
 
             f = getFunctionFromString(self.fx.get())
-            x0=int(self.x0.get())
-            x1=int(self.x1.get())
+            try:
+                x0=int(self.x0.get())
+            except:
+                x0 = 0
+            try:
+                x1=int(self.x1.get())
+            except:
+                x1 = 100
             X=np.arange(x0,x1,0.1)
             Y=f(X)
             ax.plot(X,Y)
             ax.set_title(f'Plot af funktionen: {self.fx.get()}')
+            ax.set_xlabel('X - Akse')
+            ax.set_ylabel('Y - Akse')
             plt.show()
 
 
